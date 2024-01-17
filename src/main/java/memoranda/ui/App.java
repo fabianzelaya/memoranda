@@ -99,45 +99,61 @@ public class App {
 			splash.dispose();
 	}
 
-	void init() {
-		/*
+	/*void init() {
+		*//*
 		 * if (packFrame) { frame.pack(); } else { frame.validate(); }
-		 * 
+		 *
 		 * Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-		 * 
+		 *
 		 * Dimension frameSize = frame.getSize(); if (frameSize.height >
 		 * screenSize.height) { frameSize.height = screenSize.height; } if
 		 * (frameSize.width > screenSize.width) { frameSize.width =
 		 * screenSize.width; }
-		 * 
-		 * 
+		 *
+		 *
 		 * Make the window fullscreen - On Request of users This seems not to
 		 * work on sun's version 1.4.1_01 Works great with 1.4.2 !!! So update
 		 * your J2RE or J2SDK.
-		 */
-		/* Used to maximize the screen if the JVM Version if 1.4 or higher */
-		/* --------------------------------------------------------------- */
+		 *//*
+		*//* Used to maximize the screen if the JVM Version if 1.4 or higher *//*
+		*//* --------------------------------------------------------------- *//*
 		double JVMVer =
 			Double
 				.valueOf(System.getProperty("java.version").substring(0, 3))
 				.doubleValue();
 
 		frame.pack();
-		/*if (JVMVer >= 1.4) {
+		*//*if (JVMVer >= 1.4) {
 			frame.setExtendedState(Frame.MAXIMIZED_BOTH);
 		} else {
 			frame.setExtendedState(Frame.NORMAL);
-		}*/
+		}*//*
 		// Fabian...
 		frame.setSize(800, 600);
-		/* --------------------------------------------------------------- */
-		/* Added By Jeremy Whitlock (jcscoobyrs) 07-Nov-2003 at 15:54:24 */
+		*//* --------------------------------------------------------------- *//*
+		*//* Added By Jeremy Whitlock (jcscoobyrs) 07-Nov-2003 at 15:54:24 *//*
 
 		// Not needed ???
 		frame.setVisible(true);
 		frame.toFront();
 		frame.requestFocus();
 
+	}*/
+
+
+
+	/////// FABIAN ////////
+	void init() {
+		double JVMVer =
+				Double.valueOf(System.getProperty("java.version").substring(0, 3))
+						.doubleValue();
+
+		frame.setSize(800, 600);
+		frame.setExtendedState(Frame.NORMAL);
+
+		frame.setVisible(true);
+		frame.toFront();
+		frame.requestFocus();
 	}
 
 	public static void closeWindow() {
