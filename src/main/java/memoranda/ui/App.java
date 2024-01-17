@@ -123,11 +123,13 @@ public class App {
 				.doubleValue();
 
 		frame.pack();
-		if (JVMVer >= 1.4) {
+		/*if (JVMVer >= 1.4) {
 			frame.setExtendedState(Frame.MAXIMIZED_BOTH);
 		} else {
 			frame.setExtendedState(Frame.NORMAL);
-		}
+		}*/
+		// Fabian...
+		frame.setSize(800, 600);
 		/* --------------------------------------------------------------- */
 		/* Added By Jeremy Whitlock (jcscoobyrs) 07-Nov-2003 at 15:54:24 */
 
