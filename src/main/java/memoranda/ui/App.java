@@ -149,6 +149,7 @@ public class App {
 						.doubleValue();
 
 		frame.setSize(800, 600);
+		frame.setTitle("Memoranda - Default project - Fabian");
 		frame.setExtendedState(Frame.NORMAL);
 
 		frame.setVisible(true);
